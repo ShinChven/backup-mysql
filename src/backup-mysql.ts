@@ -2,6 +2,7 @@ import path from 'path';
 import * as fs from 'fs-extra';
 import mysqldumpWrapper from 'mysqldump-wrapper';
 import moment from 'moment';
+import timestamp from './timestamp';
 
 type BackupMySQLProps = {
   outputDir: string;
@@ -28,7 +29,7 @@ const backupMySQL = async (
     compress,
   } = props;
 
-  console.log('Backup:', outputDir);
+  console.log(timestamp(), 'Backup:', outputDir);
 
   await fs.ensureDir(outputDir);
 
@@ -64,7 +65,7 @@ const backupMySQL = async (
       fs.statSync(a).mtime.getTime();
   });
 
-  console.log(`Clean old backup files, keep ${keep} ${keep > 1 ? 'files' : 'file'}`);
+  console.log(timestamp(), `Clean old backup files, keep ${keep} ${keep > 1 ? 'files' : 'file'}`);
 
   // remove old files
   for (let i = keep; i < files.length; i++) {
