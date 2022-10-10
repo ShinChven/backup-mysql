@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  BackupMySQL:
+    image: shinchven/backup-mysql
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: backup-mysql
+    restart: always
+    environment:
+      - TZ=Asia/Shanghai
+    volumes:
+      - ${PWD}/config:/usr/src/app/config
+      - ${PWD}/backups:/usr/src/app/backups

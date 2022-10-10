@@ -1,0 +1,38 @@
+{
+  "name": "backup-mysql",
+  "version": "0.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "compile": "shx rm -rf lib && tsc",
+    "prepublish": "npm run compile"
+  },
+  "keywords": [],
+  "author": {
+    "url": "https://github.com/ShinChven",
+    "name": "ShinChven ZHANG",
+    "email": "shinchven@gmail.com"
+  },
+  "repository": {
+    "url": "https://github.com/ShinChven/typescript-scaffolding.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "cron": "^2.1.0",
+    "fs-extra": "^10.1.0",
+    "moment": "^2.29.4",
+    "mysqldump-wrapper": "^0.0.2",
+    "yaml": "^2.1.3"
+  },
+  "devDependencies": {
+    "@types/cron": "^2.0.0",
+    "@types/fs-extra": "^9.0.13",
+    "@types/mocha": "^10.0.0",
+    "@types/moment": "^2.13.0",
+    "@types/node": "^16.11.64",
+    "mocha": "^10.0.0",
+    "shx": "^0.3.4",
+    "ts-mocha": "^10.0.0",
+    "typescript": "^4.8.4"
+  }
+}
