@@ -58,7 +58,8 @@ docker-compose up -d
 
 ### Prerequisites
 
-- Bash/Shell, Windows is not supported yet
+Install the following software:
+- Bash or other shell, Windows is not supported
 - MySQL Client
 - gzip
 - NodeJs
@@ -66,6 +67,10 @@ docker-compose up -d
 
 ### Run
 
+Clone this repository and run the following command:
+
 ```bash
-ts-node src/index.ts
+npm install     # install dependencies
+npm run compile # compile typescript to javascript
+npm start       # start the application
 ```
