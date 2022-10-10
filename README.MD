@@ -10,17 +10,17 @@
 Copy `config-example.yml` to `config/config.yml` and edit it.
 
 ```yml
-cronTime: "*/5 * * * *" # Cron time for backup task
-defaultKeep: 7 # Default number of keep backups
-outputDir: backups # Output directory for backups
-instances: # Instances to backup
-  - host: 127.0.0.1 # Hostname or IP address of MySQL server
-    port: 3306 # Port of MySQL server
-    user: root # Username of MySQL server
-    password: P@ssw0rd # Password of MySQL server
-    databases: # Databases to backup
+cronTime: "*/5 * * * *"     # Cron time for backup task
+defaultKeep: 7              # Default number of keep backups
+outputDir: backups          # Output directory for backups
+instances:                  # Instances to backup
+  - host: 127.0.0.1         # Hostname or IP address of MySQL server
+    port: 3306              # Port of MySQL server
+    user: root              # Username of MySQL server
+    password: P@ssw0rd      # Password of MySQL server
+    databases:              # Databases to backup
       - name: database_name # Database name to backup
-        keep: 5 # Number of keep backups for this database
+        keep: 5             # Number of keep backups for this database
 ```
 
 **Note:** If the config file was changed, you should restart the application or container to reload configuration.
