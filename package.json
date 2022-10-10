@@ -1,11 +1,11 @@
 {
   "name": "backup-mysql",
   "version": "0.0.0",
-  "description": "",
+  "description": "Backup MySQL databases automatically",
   "main": "lib/index.js",
   "scripts": {
     "compile": "shx rm -rf lib && tsc",
-    "prepublish": "npm run compile"
+    "start": "node lib/index.js"
   },
   "keywords": [],
   "author": {
