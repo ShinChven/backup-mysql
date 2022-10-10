@@ -52,7 +52,16 @@ docker-compose up -d
 
 ## Run The Application Directly
 
+### Prerequisites
+
+- Bash/Shell, Windows is not supported yet
+- MySQL Client
+- gzip
+- NodeJs
+- ts-node
+
+### Run
+
 ```bash
-npm i -g ts-node typescript
 ts-node src/index.ts
 ```
