@@ -10,7 +10,7 @@ if (config?.cronTime) {
   new CronJob(config.cronTime, async () => {
     await backup(config);
   }).start();
-  console.log(timestamp(), 'Backup cronjob is started', config.cronTime);
+  console.log(timestamp(), 'Backup cronjob started:', config.cronTime);
 } else {
   console.log(timestamp(), 'Config not available, shutting down...');
 }
