@@ -5,6 +5,8 @@
 > - Support multiple MySQL servers and databases.
 > - Dockerized.
 
+![Badge from shields.io](https://img.shields.io/docker/pulls/shinchven/backup-mysql?style=for-the-badge)
+
 ## Config Before Start
 
 Copy `config-example.yml` to `config/config.yml` and edit it.
