@@ -28,7 +28,7 @@ const backupMySQL = async (
     compress,
   } = props;
 
-  console.log('Backup:', props);
+  console.log('Backup:', outputDir);
 
   await fs.ensureDir(outputDir);
 
